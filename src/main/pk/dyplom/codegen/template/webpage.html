@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- BEGIN: main -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{TITLE}</title>
+    <style>
+        body { background-color: #aaaac8; font-family: Verdana, Helvetica, Arial; font-size: 14px; margin: 0; padding 0; }
+        .col { float: left; text-align: center; }
+        #diagram { width: 60%; }
+        #diagram img { height: 100%; }
+        #code { height: 100%; width: 40%; }
+        #code pre { font-family: monospace; text-align: left; background-color: #fff; overflow: auto; height: 100%; padding: 10px; margin: 0; }
+        button { font-weight: bold; font-size: 16px; }
+    </style>
+</head>
+<body onload="window.onresize()">
+    <div id="code" class="col">
+        <pre>
+{CODE}
+        </pre>
+        <button onclick="eval(prompt('{RUN_PROMPT}'))">{RUN_TEXT}</button>
+    </div>
+    <script>
+        {CODE}
+    </script>
+    <div id="diagram" class="col">
+        <img src="{IMAGE}">
+    </div>
+    <script>
+        window.onresize = function() { document.getElementById('code').style.height = (document.documentElement.clientHeight - 75) + 'px' }
+    </script>
+</body>
+</html>
+<!-- END: main -->

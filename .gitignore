@@ -1,0 +1,6 @@
+build/
+build-ant/
+*.iml
+dyplom-pkg/
+.idea/
+.svn/

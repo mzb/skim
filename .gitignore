@@ -1,6 +1,10 @@
 build/
 build-ant/
-*.iml
 dyplom-pkg/
+docs/
+*.docx
+*.pdf
+
+*.iml
 .idea/
 .svn/
